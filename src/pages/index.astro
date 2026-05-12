@@ -1,18 +1,11 @@
 ---
 const projects = [
   {
-    name: "Klusymfonie",
-    category: "Orchestr — crossover",
-    role: "Aranžér",
-    year: "2019–",
-    description: "Projekt vznikl na popud Janáčkovy filharmonie Ostrava: 18 aranží písní Tomáše Kluse pro symfonický orchestr. Studiové album pro Supraphon vyšlo ještě před prvním turné v roce 2019 — od té doby Klusymfonie reprízuje s různými českými orchestry.",
-  },
-  {
-    name: "Vánoce v O2 aréně",
-    category: "Orchestr — crossover",
-    role: "Aranžér",
-    year: "2023, 2025",
-    description: "Vánoční show v O2 Areně — aranžmá pro Filharmonii Hradec Králové, symfonický sbor a sedm interpretů, Jan jako aranžér i dramaturg večera.",
+    name: "Kabaret Hurvajz",
+    category: "Divadlo",
+    role: "Autor hudby a písní",
+    year: "2026",
+    description: "Rodinný kabaret k 100. narozeninám Hurvínka — Jan jako autor hudby a písní (texty Robin Král), režie Hana Mikolášková. Premiéra v Divadle Spejbla a Hurvínka 2. května 2026.",
   },
   {
     name: "K poctě Davida Stypky",
@@ -29,18 +22,11 @@ const projects = [
     description: "Vánoční turné Richarda Krajče s Filharmonií Hradec Králové a Janáčkovou filharmonií Ostrava — aranžmá pro symfonický orchestr, sbor, backvocals a rytmiku. Osm vyprodaných koncertů, živé album.",
   },
   {
-    name: "Kabaret Hurvajz",
-    category: "Divadlo",
-    role: "Autor hudby a písní",
-    year: "2026",
-    description: "Rodinný kabaret k 100. narozeninám Hurvínka — Jan jako autor hudby a písní (texty Robin Král), režie Hana Mikolášková. Premiéra v Divadle Spejbla a Hurvínka 2. května 2026.",
-  },
-  {
-    name: "Branický zázrak",
-    category: "Divadlo",
-    role: "Aranžér, kapelník",
-    year: "2022",
-    description: "Autorský muzikál Jana Svěráka s hudbou a texty Tomáše Kluse, který hraje i hlavní roli — Jan jako aranžér a kapelník živé kapely. Divadlo Na Fidlovačce.",
+    name: "Vánoce v O2 aréně",
+    category: "Orchestr — crossover",
+    role: "Aranžér",
+    year: "2023, 2025",
+    description: "Vánoční show v O2 Areně — aranžmá pro Filharmonii Hradec Králové, symfonický sbor a sedm interpretů, Jan jako aranžér i dramaturg večera.",
   },
   {
     name: "Velký finále PSO",
@@ -48,6 +34,20 @@ const projects = [
     role: "Hudební skladatel",
     year: "2024",
     description: "Dokumentární film o amatérském orchestru PSO — Jan jako autor filmové hudby. Režie Dominik Kalivoda, premiéra srpen 2024, cena prezidenta festivalu MFF Zlín.",
+  },
+  {
+    name: "Klusymfonie",
+    category: "Orchestr — crossover",
+    role: "Aranžér",
+    year: "2019–",
+    description: "Projekt vznikl na popud Janáčkovy filharmonie Ostrava: 18 aranží písní Tomáše Kluse pro symfonický orchestr. Studiové album pro Supraphon vyšlo ještě před prvním turné v roce 2019 — od té doby Klusymfonie reprízuje s různými českými orchestry.",
+  },
+  {
+    name: "Branický zázrak",
+    category: "Divadlo",
+    role: "Aranžér, kapelník",
+    year: "2022",
+    description: "Autorský muzikál Jana Svěráka s hudbou a texty Tomáše Kluse, který hraje i hlavní roli — Jan jako aranžér a kapelník živé kapely. Divadlo Na Fidlovačce.",
   },
   {
     name: "SEN — PSO benefice",
@@ -152,7 +152,7 @@ const projects = [
     --color-border: #e5e5e5;
     --font: 'Jost', system-ui, sans-serif;
     --font-mono: 'Source Code Pro', monospace;
-    --max-width: 760px;
+    --max-width: 680px;
     --spacing: clamp(3rem, 8vw, 6rem);
   }
 
@@ -168,7 +168,7 @@ const projects = [
   body {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 
   /* NAV */
@@ -199,6 +199,7 @@ const projects = [
   #hero {
     padding: var(--spacing) 0 calc(var(--spacing) * 0.75);
     border-bottom: 1px solid var(--color-border);
+    text-align: center;
   }
 
   h1 {
@@ -211,7 +212,7 @@ const projects = [
 
   .tagline {
     font-family: var(--font-mono);
-    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    font-size: clamp(0.75rem, 1.8vw, 0.9rem);
     font-weight: 300;
     color: var(--color-muted);
     letter-spacing: 0.08em;
