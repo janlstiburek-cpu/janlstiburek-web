@@ -133,7 +133,7 @@ const projects = [
               <time class="upcoming-date" datetime={u.date}>{fmtDate(u.date)}</time>
               <div class="upcoming-body">
                 <span class="project-name">{u.name}</span>
-                <p class="project-facts">{u.facts.join("  ·  ")}</p>
+                <p class="project-facts">{u.facts.join("\u00a0\u00a0·  ")}</p>
                 <a class="project-listen" href={u.link.url} target="_blank" rel="noopener">▶&ensp;{u.link.label}</a>
               </div>
             </article>
@@ -151,7 +151,7 @@ const projects = [
                 <span class="project-name">{p.name}</span>
                 <span class="project-meta">{p.role}&ensp;·&ensp;{p.year}</span>
               </div>
-              <p class="project-facts">{p.facts.join("  ·  ")}</p>
+              <p class="project-facts">{p.facts.join("\u00a0\u00a0·  ")}</p>
               <p class="project-desc">{p.description}</p>
               {p.listen && (
                 <a class="project-listen" href={p.listen.url} target="_blank" rel="noopener">▶&ensp;{p.listen.label}</a>
