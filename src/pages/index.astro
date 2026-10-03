@@ -1,4 +1,30 @@
 ---
+const upcoming = [
+  {
+    date: "2026-12-16",
+    name: "KAPITOLY — Václav Noid Bárta & Orchestr Tremolo",
+    facts: ["O2 universum", "symfonické aranže"],
+    link: { url: "https://www.o2universum.cz/vaclav-noid-barta-invites-you-to-kapitoly-an-exceptional-symphonic-rock-concert-at-the-o2-universum/", label: "Vstupenky" },
+  },
+  {
+    date: "2027-03-24",
+    name: "K poctě Věry Špinarové",
+    facts: ["Janáčkova filharmonie Ostrava", "Tereza Mašková", "Eva Burešová", "Markéta Matulová", "Gong Ostrava"],
+    link: { url: "https://www.jfo.cz/koncert/g3-k-pocte-very-spinarove/", label: "Program JFO" },
+  },
+  {
+    date: "2027-05-29",
+    name: "Richard Krajčo „50“",
+    facts: ["Filharmonie Hradec Králové", "Kryštof", "O2 arena"],
+    link: { url: "https://www.o2arena.cz/events/richard-krajco-50-narozeninovy-koncert/", label: "Vstupenky" },
+  },
+];
+
+const fmtDate = (iso) => {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${d}. ${m}. ${y}`;
+};
+
 const projects = [
   {
     name: "Kabaret Hurvajz",
@@ -82,6 +108,7 @@ const projects = [
 
     <header>
       <nav>
+        <a href="#pripravuji">Připravuji</a>
         <a href="#projekty">Projekty</a>
         <a href="#bio">Bio</a>
         <a href="#kontakt">Kontakt</a>
@@ -95,6 +122,23 @@ const projects = [
         <h1>Jan Lstibůrek</h1>
         <p class="tagline">Píšu pro orchestry&nbsp;&nbsp;|&nbsp;&nbsp;skládám&nbsp;&nbsp;|&nbsp;&nbsp;hraju na basu</p>
         <img src="/foto-hero.jpg" alt="Jan Lstibůrek za dirigentským pultem" class="hero-photo" />
+      </section>
+
+      <!-- PŘIPRAVUJI -->
+      <section id="pripravuji">
+        <h2>Připravuji</h2>
+        <div class="upcoming">
+          {upcoming.map((u) => (
+            <article class="upcoming-item" data-date={u.date}>
+              <time class="upcoming-date" datetime={u.date}>{fmtDate(u.date)}</time>
+              <div class="upcoming-body">
+                <span class="project-name">{u.name}</span>
+                <p class="project-facts">{u.facts.join("  ·  ")}</p>
+                <a class="project-listen" href={u.link.url} target="_blank" rel="noopener">▶&ensp;{u.link.label}</a>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <!-- PROJEKTY -->
@@ -148,6 +192,14 @@ const projects = [
       <p>© {new Date().getFullYear()} Jan Lstibůrek</p>
     </footer>
 
+    <script is:inline>
+      (() => {
+        const today = new Date().toISOString().slice(0, 10);
+        const items = document.querySelectorAll(".upcoming-item");
+        items.forEach((el) => { if (el.dataset.date < today) el.remove(); });
+        if (!document.querySelector(".upcoming-item")) document.getElementById("pripravuji")?.remove();
+      })();
+    </script>
   </body>
 </html>
 
@@ -318,6 +370,33 @@ const projects = [
     border-color: var(--color-text);
   }
 
+  /* PŘIPRAVUJI */
+  .upcoming {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .upcoming-item {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+
+  .upcoming-date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .upcoming-body {
+    display: grid;
+    gap: 0.25rem;
+  }
+
   /* PHOTOS */
   .hero-photo {
     display: block;
@@ -387,6 +466,11 @@ const projects = [
     .project-header {
       flex-direction: column;
       gap: 0.1rem;
+    }
+
+    .upcoming-item {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
     }
   }
 </style>
