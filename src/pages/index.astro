@@ -3,65 +3,65 @@ const projects = [
   {
     name: "Kabaret Hurvajz",
     listen: { url: "https://youtu.be/NTSo-LPz9zM", label: "Trailer" },
-    category: "Divadlo",
     role: "Autor hudby a písní",
     year: "2026",
-    description: "Rodinný kabaret k 100. narozeninám Hurvínka — Jan jako autor hudby a písní (texty Robin Král), režie Hana Mikolášková. Premiéra v Divadle Spejbla a Hurvínka 2. května 2026.",
+    facts: ["Divadlo Spejbla a Hurvínka", "texty Robin Král", "režie Hana Mikolášková"],
+    description: "Rodinný kabaret ke 100. narozeninám Hurvínka, premiéra 2. května 2026.",
   },
   {
     name: "K poctě Davida Stypky",
     listen: { url: "https://www.ceskatelevize.cz/porady/15437185493-k-pocte-davida-stypky/", label: "Záznam ČT" },
-    category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2023–",
-    description: "Pocta Davidu Stypkovi — 18 aranží písní pro Janáčkovu filharmonii Ostrava. Premiéra proběhla v lednu 2023; na pódiu Ewa Farna, Kateřina Marie Tichá, Mirai Navrátil — natočeno Českou televizí.",
+    facts: ["Janáčkova filharmonie Ostrava", "Ewa Farna", "Mirai Navrátil", "Kateřina Marie Tichá", "Bandjeez", "Česká televize"],
+    description: "18 Stypkových písní pro orchestr. Premiéra přesně dva roky po jeho smrti, reprízy 2026.",
   },
   {
     name: "Richard Krajčo & FHK/JFO",
     listen: { url: "https://open.spotify.com/album/3Emj8U2cz8BEXe2wVnmX2v", label: "Spotify" },
-    category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2025",
-    description: "Vánoční turné Richarda Krajče s Filharmonií Hradec Králové a Janáčkovou filharmonií Ostrava — aranžmá pro symfonický orchestr, sbor, backvocals a rytmiku. Osm vyprodaných koncertů, živé album.",
+    facts: ["Filharmonie Hradec Králové", "Janáčkova filharmonie Ostrava", "8 vyprodaných koncertů", "živé album"],
+    description: "Adventní turné pro symfonický orchestr, sbor, vokály a rytmiku.",
   },
   {
     name: "Vánoce v O2 aréně",
     listen: { url: "https://www.youtube.com/watch?v=ZjFQ-8OZD5E", label: "Video" },
-    category: "Orchestr — crossover",
-    role: "Aranžér",
+    role: "Aranžér a dramaturg",
     year: "2023, 2025",
-    description: "Vánoční show v O2 Areně — aranžmá pro Filharmonii Hradec Králové, smíšený sbor a sedm interpretů, Jan jako aranžér i dramaturg večera.",
+    facts: ["Filharmonie Hradec Králové", "sbor Permoník / Kühnův sbor", "O2 arena"],
+    description: "Vánoční show se sedmi interprety, mezi nimi Richard Krajčo, Adam Plachetka, Tomáš Klus nebo Václav Neckář.",
   },
   {
     name: "Velký finále PSO",
-    category: "Film",
     role: "Hudební skladatel",
     year: "2024",
-    description: "Dokumentární film o amatérském orchestru PSO — Jan jako autor filmové hudby. Režie Dominik Kalivoda, premiéra srpen 2024, cena prezidenta festivalu MFF Zlín.",
+    facts: ["dokumentární film", "režie Dominik Kalivoda", "cena prezidenta festivalu MFF Zlín"],
+    description: "Celovečerní dokument o amatérském orchestru z malého města a jeho cestě k velkému finále.",
   },
   {
     name: "Klusymfonie",
     listen: { url: "https://open.spotify.com/album/037waxSZR7SumdwEtpagYM", label: "Spotify" },
-    category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2019–",
-    description: "Projekt vznikl na popud Janáčkovy filharmonie Ostrava: 18 aranží písní Tomáše Kluse pro symfonický orchestr. Studiové album pro Supraphon vyšlo ještě před prvním turné v roce 2019 — od té doby Klusymfonie reprízuje s různými českými orchestry.",
+    facts: ["Janáčkova filharmonie Ostrava", "Tomáš Klus", "album Supraphon"],
+    description: "16 Klusových písní pro symfonický orchestr. Album vyšlo ještě před prvním turné, od té doby se reprízuje s různými orchestry.",
   },
   {
     name: "Branický zázrak",
     listen: { url: "https://open.spotify.com/album/6dZ65aFVusoDA9SG5l6F7g", label: "Spotify" },
-    category: "Divadlo",
-    role: "Aranžér",
+    role: "Aranžér · kapelník",
     year: "2022",
-    description: "Autorský muzikál Jana Svěráka s hudbou a texty Tomáše Kluse, který hraje i hlavní roli — Jan jako aranžér a kapelník živé kapely. Divadlo Na Fidlovačce.",
+    facts: ["Divadlo Na Fidlovačce", "Jan Svěrák", "Tomáš Klus"],
+    description: "Autorský muzikál Jana Svěráka s písněmi Tomáše Kluse, který hraje i hlavní roli.",
   },
   {
     name: "SEN — PSO benefice",
     listen: { url: "https://open.spotify.com/album/6DPXkqbvvBPzrA9gmuaULu", label: "Spotify" },
-    category: "Autorský projekt",
     role: "Hudební skladatel",
     year: "2022",
-    description: "Multižánrový projekt — autorská hudba na míru pro Police Symphony Orchestra. Open air show na letišti Broumov: 60 hudebníků, 50členný sbor, tanečníci a cirkusoví akrobati.",
+    facts: ["Police Symphony Orchestra", "texty Robin Král", "letiště Broumov"],
+    description: "Open air show s autorskou hudbou: 60 hudebníků, 50členný sbor, tanečníci a cirkusoví akrobati.",
   },
 ];
 ---
@@ -107,7 +107,7 @@ const projects = [
                 <span class="project-name">{p.name}</span>
                 <span class="project-meta">{p.role}&ensp;·&ensp;{p.year}</span>
               </div>
-              <p class="project-category">{p.category}</p>
+              <p class="project-facts">{p.facts.join("  ·  ")}</p>
               <p class="project-desc">{p.description}</p>
               {p.listen && (
                 <a class="project-listen" href={p.listen.url} target="_blank" rel="noopener">▶&ensp;{p.listen.label}</a>
@@ -283,13 +283,15 @@ const projects = [
     letter-spacing: 0.04em;
   }
 
-  .project-category {
+  .project-facts {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 400;
     color: var(--color-muted);
-    letter-spacing: 0.06em;
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    margin-bottom: 0.4rem;
   }
 
   .project-desc {
