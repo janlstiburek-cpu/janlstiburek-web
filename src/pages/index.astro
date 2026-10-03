@@ -2,6 +2,7 @@
 const projects = [
   {
     name: "Kabaret Hurvajz",
+    listen: { url: "https://youtu.be/NTSo-LPz9zM", label: "Trailer" },
     category: "Divadlo",
     role: "Autor hudby a písní",
     year: "2026",
@@ -9,6 +10,7 @@ const projects = [
   },
   {
     name: "K poctě Davida Stypky",
+    listen: { url: "https://www.ceskatelevize.cz/porady/15437185493-k-pocte-davida-stypky/", label: "Záznam ČT" },
     category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2023–",
@@ -16,6 +18,7 @@ const projects = [
   },
   {
     name: "Richard Krajčo & FHK/JFO",
+    listen: { url: "https://open.spotify.com/album/3Emj8U2cz8BEXe2wVnmX2v", label: "Spotify" },
     category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2025",
@@ -23,6 +26,7 @@ const projects = [
   },
   {
     name: "Vánoce v O2 aréně",
+    listen: { url: "https://www.youtube.com/watch?v=ZjFQ-8OZD5E", label: "Video" },
     category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2023, 2025",
@@ -37,6 +41,7 @@ const projects = [
   },
   {
     name: "Klusymfonie",
+    listen: { url: "https://open.spotify.com/album/037waxSZR7SumdwEtpagYM", label: "Spotify" },
     category: "Orchestr — crossover",
     role: "Aranžér",
     year: "2019–",
@@ -44,6 +49,7 @@ const projects = [
   },
   {
     name: "Branický zázrak",
+    listen: { url: "https://open.spotify.com/album/6dZ65aFVusoDA9SG5l6F7g", label: "Spotify" },
     category: "Divadlo",
     role: "Aranžér",
     year: "2022",
@@ -51,6 +57,7 @@ const projects = [
   },
   {
     name: "SEN — PSO benefice",
+    listen: { url: "https://open.spotify.com/album/6DPXkqbvvBPzrA9gmuaULu", label: "Spotify" },
     category: "Autorský projekt",
     role: "Hudební skladatel",
     year: "2022",
@@ -102,6 +109,9 @@ const projects = [
               </div>
               <p class="project-category">{p.category}</p>
               <p class="project-desc">{p.description}</p>
+              {p.listen && (
+                <a class="project-listen" href={p.listen.url} target="_blank" rel="noopener">▶&ensp;{p.listen.label}</a>
+              )}
             </article>
           ))}
         </div>
@@ -285,6 +295,24 @@ const projects = [
     font-size: 0.9375rem;
     color: #ffffff;
     line-height: 1.65;
+  }
+
+  .project-listen {
+    justify-self: start;
+    margin-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 2px;
+    transition: border-color 0.15s;
+  }
+
+  .project-listen:hover {
+    border-color: var(--color-text);
   }
 
   /* PHOTOS */
