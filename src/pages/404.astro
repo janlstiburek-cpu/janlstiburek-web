@@ -1,0 +1,64 @@
+---
+import "../styles/fonts.css";
+---
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Stránka nenalezena — Jan Lstibůrek</title>
+  </head>
+  <body>
+    <main>
+      <h1>Jan Lstibůrek</h1>
+      <p class="msg">Tahle stránka tu není.</p>
+      <a href="/">← zpět na hlavní stránku</a>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: #655d5b;
+    color: #ffffff;
+    font-family: 'Jost', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0 1.25rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 6.5vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.0;
+  }
+
+  .msg, a {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.8);
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  a:hover { color: #ffffff; border-color: #ffffff; }
+</style>

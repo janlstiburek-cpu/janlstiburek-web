@@ -1,0 +1,14 @@
+# Staré WordPress URL → nový web (301)
+/home-2/                  /             301
+/portfolio-items/*        /#projekty    301
+/portfolio_category/*     /#projekty    301
+/author/*                 /             301
+/feed/*                   /             301
+/comments/feed/*          /             301
+/wp-sitemap.xml           /sitemap.xml  301
+/wp-sitemap*              /sitemap.xml  301
+/wp/wp-content/uploads/*  /             301
+/wp/*                     /             301
+/wp-admin/*               /             301
+/wp-login.php             /             301
+/xmlrpc.php               /             410
