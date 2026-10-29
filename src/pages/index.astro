@@ -92,6 +92,24 @@ const projects = [
     description: "Open air show s autorskou hudbou: 60 hudebníků, 50členný sbor, tanečníci a cirkusoví akrobati.",
   },
 ];
+
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jan Lstibůrek",
+  url: "https://www.janlstiburek.cz/",
+  image: "https://www.janlstiburek.cz/og.jpg",
+  jobTitle: ["Orchestrální aranžér", "Orchestrátor", "Hudební skladatel", "Baskytarista"],
+  description: "Český orchestrální aranžér, orchestrátor a skladatel. Specializuje se na crossover — symfonické aranže populární hudby pro orchestry a interprety. Aktivní baskytarista.",
+  knowsAbout: ["orchestrální aranžmá", "orchestrace", "symfonické aranže populární hudby", "crossover", "filmová hudba", "baskytara"],
+  alumniOf: [
+    { "@type": "EducationalOrganization", name: "Konzervatoř Jaroslava Ježka" },
+    { "@type": "EducationalOrganization", name: "Conservatorium van Amsterdam" },
+  ],
+  nationality: { "@type": "Country", name: "Česká republika" },
+  email: "mailto:jan.lstiburek@gmail.com",
+  sameAs: ["https://www.instagram.com/janlstiburek"],
+};
 ---
 
 <html lang="cs">
@@ -114,6 +132,7 @@ const projects = [
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Jan Lstibůrek na koncertě" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
   </head>
   <body>
 
